@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>737-800 驾驶舱 · 单元 1 Dev</title>
+  <style>
+    body { margin: 0; background: #0a0e12; overflow: hidden; }
+    #overlay {
+      position: fixed; top: 8px; left: 8px; z-index: 10;
+      font: 11px/1.55 ui-monospace, Menlo, monospace;
+      color: #9f9; background: rgba(8,12,10,0.66);
+      padding: 6px 10px; border: 1px solid #2c4; border-radius: 6px;
+      max-width: 340px; white-space: pre-wrap;
+      pointer-events: auto; cursor: pointer; user-select: none;
+    }
+    #overlay.mini { font: 10px/1.4 ui-monospace, Menlo, monospace; color: #8c8; border-color: #1a3; opacity: 0.9; }
+    #overlay b { color: #fc0; }
+    #errors {
+      position: fixed; bottom: 4px; left: 4px; z-index: 10;
+      color: #f66; font: 11px ui-monospace, monospace; white-space: pre-wrap;
+    }
+  </style>
+  <script type="importmap">
+    { "imports": { "three": "../lib/three.module.js" } }
+  </script>
+</head>
+<body>
+  <div id="overlay">正在启动…</div>
+  <div id="errors"></div>
+  <script type="module" src="./cockpit-main.js"></script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <title>外部视角沉地复现 · sink-test</title>
+  <style>
+    html, body { margin: 0; height: 100%; overflow: hidden; background: #0a0e12; }
+    canvas { display: block; }
+    #sink-log {
+      position: fixed; left: 8px; bottom: 8px; width: 46%; max-height: 34%;
+      overflow: auto; z-index: 60; font: 11px/1.55 ui-monospace, Menlo, monospace;
+      color: #9fe09f; background: rgba(8,12,10,.82); border: 1px solid #2c3; border-radius: 6px;
+      padding: 6px 10px; pointer-events: none; white-space: pre-wrap;
+    }
+    #sink-log .snap { color: #4af0ff; font-weight: 700; }
+  </style>
+  <script type="importmap">
+    { "imports": { "three": "../lib/three.module.js" } }
+  </script>
+</head>
+<body>
+  <div id="sink-log">sink 日志…</div>
+  <script type="module" src="../src/main.js"></script>
+  <script type="module" src="./sink-main.js"></script>
+</body>
+</html>
